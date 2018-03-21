@@ -1,0 +1,51 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity oven is
+  
+  port (
+    reset, clk, Half_power, Full_power, Start, s30, s60, s120, Time_set, Door_open : in  std_logic;
+    Full, Half, In_light, Finished                                                 : out std_logic);
+
+end oven ;
+
+architecture struct of oven is
+
+  component Oven_ctrl
+    port (
+      reset, clk, Half_power, Full_power, Start, s30, s60, s120, Time_set, Door_open, Timeout : in  std_logic;
+      Full, Half, In_light, Finished, Start_count, Stop_count                                 : out std_logic);
+  end component;
+
+  component Oven_cout
+    port (
+      reset, clk, start, stop, s30, s60, s120 : in  std_logic;
+      aboveth                                 : out std_logic);
+  end component;
+
+  signal Start_Count_sig, Stop_Count_sig,Timeout_sig : std_logic := '0';
+
+  begin  -- struct
+
+     Control : Oven_ctrl port map (reset, clk, Half_power, Full_power, Start, s30, s60, s120, Time_set, Door_open , Timeout_sig,
+                              Full, Half, In_light, Finished,Start_Count_sig, Stop_Count_sig);
+    Counter : Oven_cout port map (reset, clk, Start_Count_sig, Stop_Count_sig, s30, s60, s120,Timeout_sig);
+
+  end struct;
+
+
+library LIB_oven;
+
+configuration config1 of oven is 
+    for struct 
+
+       for Control : Oven_ctrl use entity LIB_oven.oven_ctrl(Dataflow_view);
+       end for;
+
+       for Counter : Oven_cout use entity LIB_oven.oven_count(Impl);
+       end for;
+
+    end for; 
+end config1;
+
+

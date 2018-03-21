@@ -1,0 +1,77 @@
+# //  ModelSim SE-64 10.4b May 26 2015 Linux 3.2.0-4-amd64
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+vsim -assertdebug LIB_oven_BENCH.config2
+# vsim -assertdebug LIB_oven_BENCH.config2 
+# Start time: 12:24:50 on Mar 21,2018
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "Oven_ctrl(Dataflow_view)".
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "Oven_count(Impl)".
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.config2#1
+# Loading work.test_oven(test1)#1
+# Loading lib_oven.config1#1
+# Loading lib_oven.oven(struct)#1
+# Loading lib_oven.oven_ctrl(dataflow_view)#1
+# Loading lib_oven.oven_count(impl)#1
+vsim -assertdebug LIB_oven_BENCH.config2
+# End time: 12:25:08 on Mar 21,2018, Elapsed time: 0:00:18
+# Errors: 0, Warnings: 0
+# vsim -assertdebug LIB_oven_BENCH.config2 
+# Start time: 12:25:08 on Mar 21,2018
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.config2#1
+# Loading work.test_oven(test1)#1
+# Loading lib_oven.config1#1
+# Loading lib_oven.oven(struct)#1
+# Loading lib_oven.oven_ctrl(dataflow_view)#1
+# Loading lib_oven.oven_count(impl)#1
+run
+run
+add wave -position insertpoint  \
+sim:/test_oven/o/clk \
+sim:/test_oven/o/Half_power \
+sim:/test_oven/o/Full_power \
+sim:/test_oven/o/Start \
+sim:/test_oven/o/s30 \
+sim:/test_oven/o/s60 \
+sim:/test_oven/o/s120 \
+sim:/test_oven/o/Time_set \
+sim:/test_oven/o/Door_open \
+sim:/test_oven/o/Full \
+sim:/test_oven/o/Half \
+sim:/test_oven/o/In_light \
+sim:/test_oven/o/Finished \
+sim:/test_oven/o/Start_Count_sig \
+sim:/test_oven/o/Stop_Count_sig \
+sim:/test_oven/o/Timeout_sig
+add wave /test_oven/o/Control/clk
+add wave /test_oven/o/Control/clk
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+add wave /test_oven/o/Control/assert__prop1
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+add wave -position insertpoint  \
+sim:/test_oven/o/Control/state
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
