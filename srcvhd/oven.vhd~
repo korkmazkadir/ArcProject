@@ -17,7 +17,7 @@ architecture struct of oven is
       Full, Half, In_light, Finished, Start_count, Stop_count                                 : out std_logic);
   end component;
 
-  component Oven_cout
+  component Oven_count
     port (
       reset, clk, start, stop, s30, s60, s120 : in  std_logic;
       aboveth                                 : out std_logic);
@@ -29,12 +29,13 @@ architecture struct of oven is
 
      Control : Oven_ctrl port map (reset, clk, Half_power, Full_power, Start, s30, s60, s120, Time_set, Door_open , Timeout_sig,
                               Full, Half, In_light, Finished,Start_Count_sig, Stop_Count_sig);
-    Counter : Oven_cout port map (reset, clk, Start_Count_sig, Stop_Count_sig, s30, s60, s120,Timeout_sig);
+    Counter : Oven_count port map (reset, clk, Start_Count_sig, Stop_Count_sig, s30, s60, s120,Timeout_sig);
 
   end struct;
 
 
 library LIB_oven;
+library LIB_oven_SYNTH;
 
 configuration config1 of oven is 
     for struct 
@@ -42,10 +43,47 @@ configuration config1 of oven is
        for Control : Oven_ctrl use entity LIB_oven.oven_ctrl(Dataflow_view);
        end for;
 
-       for Counter : Oven_cout use entity LIB_oven.oven_count(Impl);
+       for Counter : Oven_count use entity LIB_oven.oven_count(Impl);
        end for;
 
     end for; 
 end config1;
+
+
+configuration config_binary_encoding of oven is 
+    for struct 
+
+       for Control : Oven_ctrl use entity LIB_oven_SYNTH.oven_ctrl(Structural_view_binary_encoding);
+       end for;
+
+       for Counter : Oven_count use entity LIB_oven.oven_count(Impl);
+       end for;
+
+    end for; 
+end config_binary_encoding;
+
+configuration config_onehot_encoding of oven is 
+    for struct 
+
+       for Control : Oven_ctrl use entity LIB_oven_SYNTH.oven_ctrl(Structural_view_onehot_encoding);
+       end for;
+
+       for Counter : Oven_count use entity LIB_oven.oven_count(Impl);
+       end for;
+
+    end for; 
+end config_onehot_encoding;
+
+configuration config_gray_encoding of oven is 
+    for struct 
+
+       for Control : Oven_ctrl use entity LIB_oven_SYNTH.oven_ctrl(Structural_view_gray_encoding);
+       end for;
+
+       for Counter : Oven_count use entity LIB_oven.oven_count(Impl);
+       end for;
+
+    end for; 
+end config_gray_encoding;
 
 

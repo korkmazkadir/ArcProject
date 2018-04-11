@@ -49,3 +49,47 @@ configuration config1 of oven is
 end config1;
 
 
+
+library LIB_oven;
+
+configuration config_binary_encoding of oven is 
+    for struct 
+
+       for Control : Oven_ctrl use entity LIB_oven.oven_ctrl(Structural_view_binary_encoding);
+       end for;
+
+       for Counter : Oven_count use entity LIB_oven.oven_count(Impl);
+       end for;
+
+    end for; 
+end config_binary_encoding;
+
+library LIB_oven;
+
+configuration config_onehot_encoding of oven is 
+    for struct 
+
+       for Control : Oven_ctrl use entity LIB_oven.oven_ctrl(Structural_view_onehot_encoding);
+       end for;
+
+       for Counter : Oven_count use entity LIB_oven.oven_count(Impl);
+       end for;
+
+    end for; 
+end config_onehot_encoding;
+
+library LIB_oven;
+
+configuration config_gray_encoding of oven is 
+    for struct 
+
+       for Control : Oven_ctrl use entity LIB_oven.oven_ctrl(Structural_view_gray_encoding);
+       end for;
+
+       for Counter : Oven_count use entity LIB_oven.oven_count(Impl);
+       end for;
+
+    end for; 
+end config_gray_encoding;
+
+

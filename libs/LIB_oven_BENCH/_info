@@ -9,135 +9,76 @@ z2
 cModel Technology
 Z0 d/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/bench
 T_opt
-!s110 1521631491
-VJeC7?1z`]gYJOElh;R8MU3
+!s110 1522842628
+VPDaR;eU07l]09B`C65TkP1
 04 7 0 work config2 1
-=1-bc305b9b2875-5ab24103-ffd-48ee
+=1-bc305b9b2875-5ac4bc03-c63ed-3fd8
 o-quiet -auto_acc_if_foreign -work LIB_oven_BENCH
 n@_opt
 OL;O;10.4b;61
-Cconfig1
-etest_counter
-Z1 atest1
-DEx8 lib_oven 10 oven_count 0 22 fnQ;R]SibgX_Z[LY_8W2P3
-DAx14 lib_oven_bench 12 test_counter 5 test1 22 ^m_766Z@m[fS[6eN0_ESi3
-Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-DEx14 lib_oven_bench 12 test_counter 0 22 G]L<IHUWme:CXoPCU7Pf92
-Z4 w1520419972
-R0
-Z5 8test_counter.vhd
-Z6 Ftest_counter.vhd
-l0
-L31
-V1aL;B1LJO`OP<UL3@SS1B0
-!s100 :[eV_I:fMkcGB;GB;::9j3
-Z7 OL;C;10.4b;61
-32
-Z8 !s110 1521631439
-!i10b 1
-Z9 !s108 1521631439.000000
-Z10 !s90 -work|LIB_oven_BENCH|test_counter.vhd|
-Z11 !s107 test_counter.vhd|
-!i113 0
-Z12 o-work LIB_oven_BENCH
 Cconfig2
 etest_oven
-R1
+atest1
 DEx8 lib_oven 4 oven 0 22 nCT;g<JSM6z<YlnITab[f0
+DCx8 lib_oven 20 config_gray_encoding 0 22 TYg8AizBVhcczUS:oGDUz2
+DCx8 lib_oven 22 config_onehot_encoding 0 22 fE^GBCKT>g7V>[HlLD2_j0
+DCx8 lib_oven 22 config_binary_encoding 0 22 <;G[OG7V9e9ZaJz]dAmog1
 DCx8 lib_oven 7 config1 0 22 ]E952DnQLUd^HC3SdR2LD1
-DAx14 lib_oven_bench 9 test_oven 5 test1 22 kWGI[1>>YdJX>HjB2m:Lz1
-R2
-R3
+DAx14 lib_oven_bench 9 test_oven 5 test1 22 3USG=_HdC_`[aS[ocI2]00
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 DEx14 lib_oven_bench 9 test_oven 0 22 zdI^66RN^hRc6b9dd2;dX1
-Z13 w1521628025
+Z3 w1522836665
 R0
-Z14 8test_oven.vhd
-Z15 Ftest_oven.vhd
+Z4 8test_oven.vhd
+Z5 Ftest_oven.vhd
 l0
-L56
-V_ma9WSc`L;3A`6NGm20YO3
-!s100 [ZDC`aj08?Eczem33liRf0
-R7
+L73
+Vo@i1]l7BYISSPkEkA8geD3
+!s100 ?H8F^zJDY5Y3[GeMh?h1;0
+Z6 OL;C;10.4b;61
 32
-R8
+Z7 !s110 1522842589
 !i10b 0
-R9
-Z16 !s90 -work|LIB_oven_BENCH|test_oven.vhd|
-Z17 !s107 test_oven.vhd|
+Z8 !s108 1522842589.000000
+Z9 !s90 -work|LIB_oven_BENCH|test_oven.vhd|
+Z10 !s107 test_oven.vhd|
 !i113 0
-R12
-Etest_counter
-R4
-R2
-R3
-R0
-R5
-R6
-l0
-L4
-VG]L<IHUWme:CXoPCU7Pf92
-!s100 N4=1MfHFcoR9m_:Z[6faF1
-R7
-32
-R8
-!i10b 1
-R9
-R10
-R11
-!i113 0
-R12
-Atest1
-R2
-R3
-DEx4 work 12 test_counter 0 22 G]L<IHUWme:CXoPCU7Pf92
-l14
-L7
-V^m_766Z@m[fS[6eN0_ESi3
-!s100 oXWA5Qz`famMcMTIWQ62R3
-R7
-32
-R8
-!i10b 1
-R9
-R10
-R11
-!i113 0
-R12
+Z11 o-work LIB_oven_BENCH
 Etest_oven
-R13
-R2
 R3
+R1
+R2
 R0
-R14
-R15
+R4
+R5
 l0
 L6
 VzdI^66RN^hRc6b9dd2;dX1
 !s100 2QD>lW0EIEG6KI2ZEzO@L3
-R7
+R6
 32
-R8
+R7
 !i10b 1
+R8
 R9
-R16
-R17
+R10
 !i113 0
-R12
+R11
 Atest1
+R1
 R2
-R3
 DEx4 work 9 test_oven 0 22 zdI^66RN^hRc6b9dd2;dX1
-l22
+l30
 L9
-VkWGI[1>>YdJX>HjB2m:Lz1
-!s100 n_oP?HhZ4_zNWeKC0NWlH1
-R7
+V3USG=_HdC_`[aS[ocI2]00
+!s100 Yh?8WoC^:P<nNnE4>a;?a3
+R6
 32
-R8
+R7
 !i10b 1
+R8
 R9
-R16
-R17
+R10
 !i113 0
-R12
+R11

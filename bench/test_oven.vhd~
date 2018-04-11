@@ -17,11 +17,27 @@ architecture test1 of test_oven is
   signal reset_sig, clk_sig, Half_power_sig, Full_power_sig, Start_sig, s30_sig, s60_sig, s120_sig, Time_set_sig, Door_open_sig : std_logic := '0';
   signal Full_sig, Half_sig, In_light_sig, Finished_sig : std_logic;
 
-  --for o:oven use configuration  LIB_oven.config1;
+ signal Full_sig_binary, Half_sig_binary, In_light_sig_binary, Finished_sig_binary : std_logic;
+ signal Full_sig_onehot, Half_sig_onehot, In_light_sig_onehot, Finished_sig_onehot : std_logic;
+ signal Full_sig_gray, Half_sig_gray, In_light_sig_gray, Finished_sig_gray : std_logic;
+
+
+-- PSL default clock is (clk'event and clk='1');
+-- PSL property propOutputs is always( (Full_sig = Full_sig_binary and Full_sig_binary =  Full_sig_onehot and  Full_sig_onehot = Full_sig_gray ) and ( Half_sig = Half_sig_binary and Half_sig_binary = Half_sig_onehot and Half_sig_onehot = Half_sig_gray) and ( In_light_sig = In_light_sig_binary and In_light_sig_binary = In_light_sig_onehot and In_light_sig_onehot = In_light_sig_gray) and ( Finished_sig = Finished_sig_binary and Finished_sig_binary = Finished_sig_onehot and Finished_sig_onehot = Finished_sig_gray) );
+-- PSL assert propOutputs;
+
 
  begin
 
  o:oven port map(reset_sig, clk_sig, Half_power_sig, Full_power_sig, Start_sig, s30_sig, s60_sig, s120_sig, Time_set_sig, Door_open_sig,Full_sig, Half_sig, In_light_sig, Finished_sig);
+
+
+ binary:oven port map(reset_sig, clk_sig, Half_power_sig, Full_power_sig, Start_sig, s30_sig, s60_sig, s120_sig, Time_set_sig, Door_open_sig,Full_sig_binary, Half_sig_binary, In_light_sig_binary, Finished_sig_binary);
+
+ onehot:oven port map(reset_sig, clk_sig, Half_power_sig, Full_power_sig, Start_sig, s30_sig, s60_sig, s120_sig, Time_set_sig, Door_open_sig,Full_sig_onehot, Half_sig_onehot, In_light_sig_onehot, Finished_sig_onehot);
+
+ gray:oven port map(reset_sig, clk_sig, Half_power_sig, Full_power_sig, Start_sig, s30_sig, s60_sig, s120_sig, Time_set_sig, Door_open_sig,Full_sig_gray, Half_sig_gray, In_light_sig_gray, Finished_sig_gray);
+
 
 clocktime: process 
 begin  -- process clocktime
@@ -29,6 +45,7 @@ begin  -- process clocktime
     	clk_sig <= not clk_sig;
 end process clocktime;	
 
+reset_sig <= '1' after 1.25 sec , '0' after 2.25 sec;
 
 Half_power_sig <='1' after 5.25 sec, '0' after 7.25 sec, '1' after 9.25 sec;
 
@@ -55,8 +72,16 @@ library LIB_oven_BENCH;
 
 configuration config2 of LIB_oven_BENCH.test_oven is 
     for test1 
+
        for o:oven use configuration LIB_oven.config1;
-       end for;
+	end for;
+       for binary:oven use configuration LIB_oven.config_binary_encoding;
+	end for;
+       for onehot:oven use configuration LIB_oven.config_onehot_encoding;
+	end for;
+       for gray:oven use configuration LIB_oven.config_gray_encoding;
+       	end for;
+
     end for; 
 end config2; 
 

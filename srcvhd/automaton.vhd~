@@ -19,7 +19,15 @@ architecture Dataflow_view of Oven_ctrl is
 
  signal state, nextstate : States := Idle;
  
-	PSL default clock is (clk'event and clk='1');
+-- PSL default clock is (clk'event and clk='1');
+-- PSL property prop1 is always((state=Idle -> state/= Operation_enabled) until Time_set='1');
+-- PSL assert prop1;
+
+-- PSL property prop2 is always((state=Operating and  Door_open='1' ) -> ( next (state /= Operating) and (start='1' before state = Operating) )   );
+-- PSL assert prop2;
+
+-- PSL property prop3 is always((state=Operating) ->  (In_light = '1' until( (state = Operation_disabled and Door_open /= '1' ) or Timeout = '1' ) ) );
+-- PSL assert prop3;
 
 
 begin 
@@ -134,7 +142,7 @@ begin  -- process
           (state = Operation_enabled and Door_open = '1') or
           (state = Operation_enabled and Start = '1' and door_open = '0') or
           (state = Operating) or
-          (state = Operation_disabled and door_open='0')then
+          (state = Operation_disabled and door_open='1')then
            in_light <= '1';
          else
            in_light <= '0';

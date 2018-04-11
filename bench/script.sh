@@ -10,6 +10,5 @@ vlib ../libs/LIB_oven_BENCH
 
 
 ## compilation
-vcom -work LIB_oven_BENCH test_counter.vhd
 vcom -work LIB_oven_BENCH test_oven.vhd
 

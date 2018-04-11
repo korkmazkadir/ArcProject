@@ -9,146 +9,287 @@ z2
 cModel Technology
 Z0 d/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd
 Cconfig1
-eoven
-astruct
-Z1 DEx4 work 10 oven_count 0 22 fnQ;R]SibgX_Z[LY_8W2P3
-Z2 DEx4 work 9 oven_ctrl 0 22 S3SRl?G`?^>BVJz5hYGej0
-DAx4 work 4 oven 6 struct 22 NAO<4@o;ZmViOC7c6Tz`>0
-Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z5 DEx4 work 4 oven 0 22 nCT;g<JSM6z<YlnITab[f0
-Z6 w1521621795
+Z1 eoven
+Z2 astruct
+Z3 DEx4 work 10 oven_count 0 22 fnQ;R]SibgX_Z[LY_8W2P3
+Z4 DEx4 work 9 oven_ctrl 0 22 S3SRl?G`?^>BVJz5hYGej0
+Z5 DAx4 work 4 oven 6 struct 22 NAO<4@o;ZmViOC7c6Tz`>0
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z8 DEx4 work 4 oven 0 22 nCT;g<JSM6z<YlnITab[f0
+Z9 w1522842146
 R0
-Z7 8oven.vhd
-Z8 Foven.vhd
+Z10 8oven.vhd
+Z11 Foven.vhd
 l0
 L39
 V]E952DnQLUd^HC3SdR2LD1
 !s100 6Ya9g8@O@3f<STCHH?DkB0
-Z9 OL;C;10.4b;61
+Z12 OL;C;10.4b;61
 32
-Z10 !s110 1521631462
+Z13 !s110 1522842460
 !i10b 1
-Z11 !s108 1521631462.000000
-Z12 !s90 -work|LIB_oven|oven.vhd|-cover|fbs|
-Z13 !s107 oven.vhd|
+Z14 !s108 1522842460.000000
+Z15 !s90 -work|LIB_oven|oven.vhd|-cover|fbs|
+Z16 !s107 oven.vhd|
 !i113 0
-Z14 !s102 -cover fbs
-Z15 o-work LIB_oven -cover fbs
-Eoven
-R6
+Z17 !s102 -cover fbs
+Z18 o-work LIB_oven -cover fbs
+Cconfig_binary_encoding
+R1
+R2
 R3
 R4
-R0
+R5
+R6
 R7
 R8
+R9
+R0
+R10
+R11
+l0
+L55
+V<;G[OG7V9e9ZaJz]dAmog1
+!s100 >A:<IRN=;NSYKJ15]a>0O1
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 0
+R17
+R18
+Cconfig_gray_encoding
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R0
+R10
+R11
+l0
+L83
+VTYg8AizBVhcczUS:oGDUz2
+!s100 fAOdBN[d=F>HBdjn<ZQ^T1
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 0
+R17
+R18
+Cconfig_onehot_encoding
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R0
+R10
+R11
+l0
+L69
+VfE^GBCKT>g7V>[HlLD2_j0
+!s100 M9@D@V_TXWV;Tjj8Pd9Sf1
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 0
+R17
+R18
+Eoven
+R9
+R6
+R7
+R0
+R10
+R11
 l0
 L4
 VnCT;g<JSM6z<YlnITab[f0
 !s100 [MghTVi>]<cncIWgT8^KO1
-R9
-32
-R10
-!i10b 1
-R11
 R12
+32
 R13
-!i113 0
+!i10b 1
 R14
 R15
+R16
+!i113 0
+R17
+R18
 Astruct
-R3
-R4
-R5
+R6
+R7
+R8
 l28
 L12
 VNAO<4@o;ZmViOC7c6Tz`>0
 !s100 nT?Cg=`]]CcX7dEL3F8I93
-R9
-32
-R10
-!i10b 1
-R11
 R12
+32
 R13
-!i113 0
+!i10b 1
 R14
 R15
+R16
+!i113 0
+R17
+R18
 Eoven_count
-Z16 w1520010623
-R3
-R4
+Z19 w1520010623
+R6
+R7
 R0
-Z17 8counter.vhd
-Z18 Fcounter.vhd
+Z20 8counter.vhd
+Z21 Fcounter.vhd
 l0
 L7
 VfnQ;R]SibgX_Z[LY_8W2P3
 !s100 RMZbWIELelGc?^Y>KhgJB0
-R9
+R12
 32
-R10
+R13
 !i10b 1
-R11
-Z19 !s90 -work|LIB_oven|counter.vhd|-cover|fbs|
-Z20 !s107 counter.vhd|
-!i113 0
 R14
-R15
+Z22 !s90 -work|LIB_oven|counter.vhd|-cover|fbs|
+Z23 !s107 counter.vhd|
+!i113 0
+R17
+R18
 Aimpl
+R6
+R7
 R3
-R4
-R1
 l16
 L12
 VDJCI4i1DMmZ:k]3ZL^]zL0
 !s100 Ah`f;]OWHWVjRRlnORD@>3
-R9
+R12
 32
-R10
+R13
 !i10b 1
-R11
-R19
-R20
-!i113 0
 R14
-R15
+R22
+R23
+!i113 0
+R17
+R18
 Eoven_ctrl
-Z21 w1521631434
-R3
-R4
+Z24 w1522842420
+R6
+R7
 R0
-Z22 8automaton.vhd
-Z23 Fautomaton.vhd
+Z25 8automaton.vhd
+Z26 Fautomaton.vhd
 l0
 L5
 VS3SRl?G`?^>BVJz5hYGej0
 !s100 Kl2X?MXCG[[939TJmF`Yf0
-R9
+R12
 32
-R10
+R13
 !i10b 1
-R11
-Z24 !s90 -work|LIB_oven|automaton.vhd|-cover|fbs|
-Z25 !s107 automaton.vhd|
-!i113 0
 R14
-R15
-Adataflow_view
-R3
+Z27 !s90 -work|LIB_oven|automaton.vhd|-cover|fbs|
+Z28 !s107 automaton.vhd|
+!i113 0
+R17
+R18
+Astructural_view_onehot_encoding
 R4
-R2
-l27
-L10
-VfMd=Q5=?U7IcdY9[NBJ=D2
-!s100 V>?k:mCi1I7jdl_m[em?`2
-R9
+Z29 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+R6
+R7
+Z30 DPx11 c35_corelib 11 vcomponents 0 22 o@D:EEcU=QfV=eR05MdS21
+l333
+L326
+V>`BD6U<j5mhSZEnAWFZS63
+!s100 O4f=BnFMHMPUlCOSX@`_l1
+R12
 32
-R10
+R13
 !i10b 1
-R11
-R24
-R25
-!i113 0
 R14
-R15
+R27
+R28
+!i113 0
+R17
+R18
+Astructural_view_gray_encoding
+R4
+R29
+R6
+R7
+R30
+l259
+L252
+V:3hRP_@1GL<=?XD1h7aSf0
+!s100 MK1B<_K4E?IngbP5Va7VX0
+R12
+32
+R13
+!i10b 1
+R14
+R27
+R28
+!i113 0
+R17
+R18
+Astructural_view_binary_encoding
+R4
+R29
+R6
+R7
+R30
+l187
+L180
+VKGYFmR^82WUNT58V8NhS<2
+!s100 JPC@TLRlG[6fZfFDE_oKR0
+R12
+32
+R13
+!i10b 1
+R14
+R27
+R28
+!i113 0
+R17
+R18
+Adataflow_view
+R6
+R7
+R4
+l34
+L10
+VVFGU7^PicKD<;_AGFP1kf0
+!s100 0nL^[XbPMQ:eZTlkbVfc60
+R12
+32
+R13
+!i10b 1
+R14
+R27
+R28
+!i113 0
+R17
+R18

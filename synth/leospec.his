@@ -1,0 +1,32 @@
+#
+#
+# 
+# Wed 04 Apr 2018 01:01:15 PM CEST
+load_library c35_CORELIB
+set encoding Binary
+read -technology "c35_CORELIB"  { /tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd }
+pre_optimize -common_logic -unused_logic -boundary -xor_comparator_optimize 
+pre_optimize -extract 
+optimize .work.Oven_ctrl.Dataflow_view -target c35_CORELIB -macro -delay -effort quick -hierarchy auto 
+optimize_timing .work.Oven_ctrl.Dataflow_view 
+report_area /tp/xm1iarc/xm1iarc002/projet_asic/project_oven/synth/report_controler_binary -cell_usage -all_leafs 
+set novendor_constraint_file FALSE
+auto_write -format VHDL automaton_binary.vhd
+set encoding OneHot
+read -technology "c35_CORELIB"  { /tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd }
+pre_optimize -common_logic -unused_logic -boundary -xor_comparator_optimize 
+pre_optimize -extract 
+optimize .work.Oven_ctrl.Dataflow_view -target c35_CORELIB -macro -delay -effort quick -hierarchy auto 
+optimize_timing .work.Oven_ctrl.Dataflow_view 
+report_area /tp/xm1iarc/xm1iarc002/projet_asic/project_oven/synth/report_controler_onehot -cell_usage -all_leafs 
+set novendor_constraint_file FALSE
+auto_write -format VHDL automaton_onehot.vhd
+set encoding Gray
+read -technology "c35_CORELIB"  { /tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd }
+pre_optimize -common_logic -unused_logic -boundary -xor_comparator_optimize 
+pre_optimize -extract 
+optimize .work.Oven_ctrl.Dataflow_view -target c35_CORELIB -macro -delay -effort quick -hierarchy auto 
+optimize_timing .work.Oven_ctrl.Dataflow_view 
+report_area /tp/xm1iarc/xm1iarc002/projet_asic/project_oven/synth/report_controler_degray -cell_usage -all_leafs 
+set novendor_constraint_file FALSE
+auto_write -format VHDL automaton_degray.vhd

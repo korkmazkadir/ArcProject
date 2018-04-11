@@ -1,0 +1,164 @@
+LeonardoSpectrum Level 3 - 2015a.6 (Release Production Release, compiled Aug 19 2015 at 05:45:58)
+Copyright 1990-2015 Mentor Graphics.  All rights reserved.
+Portions copyright 1991-2015 Compuware Corporation
+
+Session history will be logged to file '/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/synth/leospec.his'
+--
+-- Welcome to LeonardoSpectrum Level 3
+-- Run Started On Wed Apr 04 01:01:15 PM CEST 2018
+--
+Reading library file `/softslin/leonardo2015a/lib/c35_CORELIB.syn`...
+Delays assume: Process=typical Temp= 25.0 C  Voltage=3.30 V  
+Info: setting encoding to auto
+Info, Command 'load_library' finished successfully
+Info: setting encoding to Binary
+Binary
+-- Reading file /softslin/leonardo2015a/data/standard.vhd for unit standard
+-- Loading package standard into library std
+-- Reading vhdl file /tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd into library work
+-- Reading file /softslin/leonardo2015a/data/std_1164.vhd for unit std_logic_1164
+-- Loading package std_logic_1164 into library ieee
+-- Loading entity Oven_ctrl into library work
+"/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd",line 11: Info, Enumerated type States with 8 elements encoded as Binary.
+Encodings for States values
+        value    States[2-0]
+============================
+           Idle  000
+  Full_power_on  001
+  Half_power_on  010
+       Set_time  011
+Operation_enabled  100
+Operation_disabled  101
+      Operating  110
+       Complete  111
+
+-- Loading architecture Dataflow_view of Oven_ctrl into library work
+-- Compiling root entity Oven_ctrl(Dataflow_view)
+"/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd",line 20: Warning, initial value for state is ignored for synthesis.
+"/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd",line 20: Warning, initial value for nextstate is ignored for synthesis.
+"/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd",line 40: Warning, state should be declared on the sensitivity list of the process.
+"/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd",line 103: Info, others clause is never selected for synthesis.
+"/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd",line 126: Warning, state should be declared on the sensitivity list of the process.
+Info, Command 'read' finished successfully
+-- Boundary optimization.
+-- Start pre-optimization for design .work.Oven_ctrl.Dataflow_view
+Info, Command 'pre_optimize' finished successfully
+-- Start pre-optimization for design .work.Oven_ctrl.Dataflow_view
+Info, Command 'pre_optimize' finished successfully
+NO wire table is found
+-- Optimizing netlist .work.Oven_ctrl.Dataflow_view
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+-- Final Design Rule Check..
+Info, Command 'optimize' finished successfully
+-- Start timing optimization for design .work.Oven_ctrl.Dataflow_view
+No critical paths to optimize at this level
+Info, Command 'optimize_timing' finished successfully
+Info, Command 'report_area' finished successfully
+Info: setting novendor_constraint_file to FALSE
+FALSE
+AutoWrite args are : -format VHDL automaton_binary.vhd
+-- Writing file automaton_binary.vhd
+Info, Command 'auto_write' finished successfully
+Info: setting encoding to OneHot
+OneHot
+-- Reading vhdl file /tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd into library work
+-- Loading entity Oven_ctrl into library work
+"/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd",line 5: Warning, replacing Oven_ctrl in HDL library work.
+"/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd",line 11: Info, Enumerated type States with 8 elements encoded as OneHot.
+Encodings for States values
+        value    States[7-0]
+============================
+           Idle  -------1
+  Full_power_on  ------1-
+  Half_power_on  -----1--
+       Set_time  ----1---
+Operation_enabled  ---1----
+Operation_disabled  --1-----
+      Operating  -1------
+       Complete  1-------
+
+-- Loading architecture Dataflow_view of Oven_ctrl into library work
+"/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd",line 10: Warning, replacing Dataflow_view of entity Oven_ctrl.
+-- Compiling root entity Oven_ctrl(Dataflow_view)
+"/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd",line 20: Warning, initial value for state is ignored for synthesis.
+"/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd",line 20: Warning, initial value for nextstate is ignored for synthesis.
+"/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd",line 40: Warning, state should be declared on the sensitivity list of the process.
+"/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd",line 103: Info, others clause is never selected for synthesis.
+"/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd",line 126: Warning, state should be declared on the sensitivity list of the process.
+-- Info, replacing Oven_ctrl(Dataflow_view)
+Info, Command 'read' finished successfully
+-- Boundary optimization.
+-- Start pre-optimization for design .work.Oven_ctrl.Dataflow_view
+Info, Command 'pre_optimize' finished successfully
+-- Start pre-optimization for design .work.Oven_ctrl.Dataflow_view
+Info, Command 'pre_optimize' finished successfully
+NO wire table is found
+-- Optimizing netlist .work.Oven_ctrl.Dataflow_view
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+-- Final Design Rule Check..
+Info, Command 'optimize' finished successfully
+-- Start timing optimization for design .work.Oven_ctrl.Dataflow_view
+No critical paths to optimize at this level
+Info, Command 'optimize_timing' finished successfully
+Info, Command 'report_area' finished successfully
+Info: setting novendor_constraint_file to FALSE
+FALSE
+AutoWrite args are : -format VHDL automaton_onehot.vhd
+-- Writing file automaton_onehot.vhd
+Info, Command 'auto_write' finished successfully
+Info: setting encoding to Gray
+Gray
+-- Reading vhdl file /tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd into library work
+-- Loading entity Oven_ctrl into library work
+"/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd",line 5: Warning, replacing Oven_ctrl in HDL library work.
+"/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd",line 11: Info, Enumerated type States with 8 elements encoded as Gray.
+Encodings for States values
+        value    States[2-0]
+============================
+           Idle  000
+  Full_power_on  001
+  Half_power_on  011
+       Set_time  010
+Operation_enabled  110
+Operation_disabled  111
+      Operating  101
+       Complete  100
+
+-- Loading architecture Dataflow_view of Oven_ctrl into library work
+"/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd",line 10: Warning, replacing Dataflow_view of entity Oven_ctrl.
+-- Compiling root entity Oven_ctrl(Dataflow_view)
+"/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd",line 20: Warning, initial value for state is ignored for synthesis.
+"/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd",line 20: Warning, initial value for nextstate is ignored for synthesis.
+"/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd",line 40: Warning, state should be declared on the sensitivity list of the process.
+"/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd",line 103: Info, others clause is never selected for synthesis.
+"/tp/xm1iarc/xm1iarc002/projet_asic/project_oven/srcvhd/automaton.vhd",line 126: Warning, state should be declared on the sensitivity list of the process.
+-- Info, replacing Oven_ctrl(Dataflow_view)
+Info, Command 'read' finished successfully
+-- Boundary optimization.
+-- Start pre-optimization for design .work.Oven_ctrl.Dataflow_view
+Info, Command 'pre_optimize' finished successfully
+-- Start pre-optimization for design .work.Oven_ctrl.Dataflow_view
+Info, Command 'pre_optimize' finished successfully
+NO wire table is found
+-- Optimizing netlist .work.Oven_ctrl.Dataflow_view
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+-- Final Design Rule Check..
+Info, Command 'optimize' finished successfully
+-- Start timing optimization for design .work.Oven_ctrl.Dataflow_view
+No critical paths to optimize at this level
+Info, Command 'optimize_timing' finished successfully
+Info, Command 'report_area' finished successfully
+Info: setting novendor_constraint_file to FALSE
+FALSE
+AutoWrite args are : -format VHDL automaton_degray.vhd
+-- Writing file automaton_degray.vhd
+Info, Command 'auto_write' finished successfully
